@@ -9,4 +9,5 @@ fakeConsole.start()
     .pauseFor(200)
     .typeString('<h2></h2><a href="https://stackoverflow.com/users/14491660/eliouz">>StackOverflow<span></span></a>')
     .typeString('  :)')
+    .pauseFor(200)
     .deleteChars(4);
