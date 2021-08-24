@@ -1,7 +1,18 @@
-class command{
-    constructor(name, location){
+//class that hold all the informations of an individual command
+class Command{
+    description;
+    constructor(name){
         this.name=name;
-        this.location=location;
-        describtion;
+    }
+}
+
+//class that hold all the commands
+class Commands{
+    constructor(){
+        this.commands=[]
+    }
+    newCommand(c){
+        this.commands.push(c);
+        return c;
     }
 }

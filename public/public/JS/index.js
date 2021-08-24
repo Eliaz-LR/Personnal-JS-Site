@@ -5,6 +5,14 @@ var fakeConsole = new Typewriter(idConsole,{
     delay: 20,
 });
 
+//initialize commands
+let commands = new Commands();
+commands.newCommand(new Help());
+
+function isTheRightCommand(command){
+    return command.name.includes(document.getElementById('imputConsole').value)
+}
+
 //function used just to print something console style
 function printInConsole(toprint){
     fakeConsole.stop();
@@ -14,9 +22,13 @@ function printInConsole(toprint){
 
 //other things that needs to be done after imputing something in the console
 function imputedConsole(params) {
-    printInConsole(params);
+    //cherche dans les Command de commands (instance d'un objet de type Commands) un nom qui correspond au truc entré
+    let command_to_exec_index = commands.commands.findIndex(isTheRightCommand);
+    printInConsole(commands.commands[command_to_exec_index].exec());
     document.getElementById('imputConsole').value='';
 }
+
+
 
 document.getElementById('imputConsole').onblur = function (event) { 
     var blurEl = this; 
