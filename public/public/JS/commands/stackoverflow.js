@@ -1,6 +1,6 @@
 class StackOverflow extends Command{
     constructor(){
-        super(["stackoverflow","StackOverflow"]);
+        super(["stackoverflow","stack overflow"]);
         super.description="link to my Stackoverflow";
     }
     exec() {
