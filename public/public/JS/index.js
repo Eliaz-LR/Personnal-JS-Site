@@ -7,7 +7,9 @@ var fakeConsole = new Typewriter(idConsole,{
 
 //initialize commands
 let commands = new Commands();
-commands.newCommand(new Help());
+commands.newCommand(new GitHub());
+//must be init last, uses all the previous commands
+commands.newCommand(new Help(commands.commands));
 
 function isTheRightCommand(command){
     return command.name.includes(document.getElementById('imputConsole').value)
