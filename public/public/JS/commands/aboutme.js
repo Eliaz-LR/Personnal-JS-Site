@@ -1,6 +1,6 @@
 class AboutMe extends Command{
     constructor(){
-        super(["aboutme","about"]);
+        super(["aboutme","about","am"]);
         super.description="some info about me";
     }
     exec() {

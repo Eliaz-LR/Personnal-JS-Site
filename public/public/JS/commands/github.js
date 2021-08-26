@@ -1,6 +1,6 @@
 class GitHub extends Command{
     constructor(){
-        super(["github","git"]);
+        super(["github","git","gh"]);
         super.description="link to my GitHub";
     }
     exec() {
