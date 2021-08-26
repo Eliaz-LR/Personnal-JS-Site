@@ -8,6 +8,8 @@ var fakeConsole = new Typewriter(idConsole,{
 //initialize commands
 let commands = new Commands();
 commands.newCommand(new GitHub());
+commands.newCommand(new StackOverflow());
+commands.newCommand(new AboutMe());
 //must be init last, uses all the previous commands
 commands.newCommand(new Help(commands.commands));
 
@@ -18,8 +20,8 @@ function isTheRightCommand(command){
 //function used just to print something console style
 function printInConsole(toprint){
     fakeConsole.stop();
-    fakeConsole.typeString('<h2></h2>>'+toprint);
-    fakeConsole.start();    
+    fakeConsole.typeString('<br/>>'+toprint);
+    fakeConsole.start();
 }
 
 //other things that needs to be done after imputing something in the console
