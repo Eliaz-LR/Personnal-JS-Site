@@ -26,7 +26,7 @@ function printInConsole(toprint){
 
 //other things that needs to be done after imputing something in the console
 function imputedConsole() {
-    //cherche dans les Command de commands (instance d'un objet de type Commands) un nom qui correspond au truc entré
+    //search in the Command of commands (instance of an object of type Commands) something corresponding to whats entered
     let command_to_exec_index = commands.commands.findIndex(isTheRightCommand);
     printInConsole(commands.commands[command_to_exec_index].exec());
     document.getElementById('imputConsole').value='';
@@ -49,15 +49,3 @@ document.addEventListener("keyup", function(event) {
 document.getElementById('imputConsole').focus();
 fakeConsole.start();
 printInConsole("Type 'h' or 'help' to list the commands available");
-/*
-fakeConsole.start()
-    .typeString('<a href="https://github.com/Eliaz-LR">>GitHub<span></span></a>')
-    .pauseFor(200)
-    .typeString('<h2></h2><a href="https://stackoverflow.com/users/14491660/eliouz">>StackOverflow<span></span></a>')
-    .typeString('  :)')
-    .pauseFor(200)
-    .deleteChars(4)
-    .pauseFor(2000)
-    .typeString("<h2></h2><h2></h2>>I'm still learning new things every weeks, be kind on what I've done so far ;)");
-
-*/
